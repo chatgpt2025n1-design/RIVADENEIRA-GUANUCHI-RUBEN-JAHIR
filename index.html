@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio PRO - Rivadeneira Guanuchi Ruben Jahir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="tech-grid"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <div class="container">
+        <header class="caratula pro-card">
+            <div class="logo-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbFqQuORJhdVCGHpQr7yN6OT-iblvARywRM2IZUDqOpJRKYdvi04j-1uo&s=10" alt="Logo Institucional" class="logo-img">
+            </div>
+            <div class="badge-pro">2026 - 2027</div>
+            <h1>UNIDAD EDUCATIVA CARMEN MORA DE ENCALADA</h1>
+            <h2>DISEÑO Y DESARROLLO WEB</h2>
+            <div class="datos-estudiante">
+                <p><strong>Estudiante:</strong> RIVADENEIRA GUANUCHI RUBEN JAHIR</p>
+                <p><strong>Curso:</strong> 2do Informática B</p>
+                <p><strong>Docente:</strong> Lic. Patricio Medina</p>
+            </div>
+        </header>
+
+        <section class="seccion-tema">
+            <h2>⚡ Tema Central: SIMULADORES ELECTRONICOS ⚡</h2>
+            <p class="intro-tema">Herramientas de software imprescindibles para modelar, analizar y probar circuitos eléctricos y digitales de manera virtual, optimizando el desarrollo de hardware y software sin riesgos físicos.</p>
+        </section>
+
+        <div class="grid-tarjetas">
+            <div class="tarjeta pro-card card-flex-fix">
+                <div class="card-content-wrapper">
+                    <h3>🔍 ¿Qué son y para qué sirven?</h3>
+                    <p>Son programas informáticos diseñados para reproducir con alta fidelidad el comportamiento exacto de un circuito real mediante modelos matemáticos y físicos. Ayudan a predecir fallos y optimizar diseños antes de su ensamblaje.</p>
+                </div>
+                <div class="espacio-imagen" onclick="abrirModal(this)">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhU0nbHtcFQq988fShZng5R7MS5fAaTMKogBKgR2pcyjepl4cBc4zdFTDr4KGaUChZBt_AE67sFOyGQYK1zIjYovXagbTkTY5E8hHItF93wf2rhQZfrHFjdbdUSRCRI0xnNTkKS4yElJgw/" alt="Simulador de Circuitos">
+                    <span class="zoom-icon">🔍 Clic para ampliar con Lupa</span>
+                </div>
+            </div>
+
+            <div class="tarjeta pro-card card-flex-fix">
+                <div class="card-content-wrapper">
+                    <h3>⚙️ Criterios para Elegir un Simulador</h3>
+                    <ul>
+                        <li><strong>Definir el Objetivo:</strong> ¿Es para aprender, entrenar habilidades, realizar pruebas o investigar?</li>
+                        <li><strong>Nivel de Realismo:</strong> Detallado para profesionales o intuitivo para principiantes.</li>
+                        <li><strong>Facilidad de Uso:</strong> Interfaz accesible que permite concentrarse en la práctica.</li>
+                        <li><strong>Precisión y Retroalimentación:</strong> Informes, métricas y reportes de errores basados en datos confiables.</li>
+                        <li><strong>Recursos y Actualizaciones:</strong> Costo, hardware requerido y comunidad activa.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tarjeta pro-card card-flex-fix">
+                <div class="card-content-wrapper">
+                    <h3>💻 Tipos de Programas Utilizados</h3>
+                    <p><strong>Simuladores SPICE:</strong> Empleados para analizar voltajes, corrientes y respuestas en circuitos analógicos y digitales (Ej: LTspice, PSpice, Ngspice).</p>
+                    <p><strong>Software de Diseño PCB:</strong> Placas de circuito impreso con verificación integrada (Ej: Altium Designer, Proteus).</p>
+                    <p><strong>Simuladores Educativos:</strong> Interactivos y visuales para estudiantes (Ej: Tinkercad Circuits, Multisim).</p>
+                </div>
+                <div class="espacio-imagen" onclick="abrirModal(this)">
+                    <img src="https://play-lh.googleusercontent.com/Pogjd02aPMG6Sc850sz68CsqcUbQIRWj2E9hsGKZujBdZPcb3Oj1WyyXdPZ1-o1LmYkVSAdeX3GTU1ezA5nW" alt="Tipos de Simuladores">
+                    <span class="zoom-icon">🔍 Clic para ampliar con Lupa</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="seccion-video pro-card">
+            <h2>🎥 VIDEO DEMOSTRATIVO DE LOS SIMULADORES</h2>
+            <div class="centrar-video">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Wd1w8iqtBDU" title="Video de Simuladores Electrónicos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 - Portafolio PRO Electrónica | RIVADENEIRA GUANUCHI RUBEN JAHIR | 2do Informática B</p>
+        </footer>
+    </div>
+
+    <div id="modalZoom" class="modal" onclick="cerrarModal()">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="imgModal">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

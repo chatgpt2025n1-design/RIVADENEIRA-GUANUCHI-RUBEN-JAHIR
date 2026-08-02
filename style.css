@@ -1,0 +1,392 @@
+/* Estilos Globales - Versión PRO Multicolor Neón */
+:root {
+    --bg-color: #030712;
+    --card-bg: rgba(15, 23, 42, 0.85);
+    --neon-cyan: #00f2fe;
+    --neon-blue: #4facfe;
+    --neon-purple: #c084fc;
+    --neon-pink: #ec4899;
+    --text-color: #f1f5f9;
+    --glow-cyan: rgba(0, 242, 254, 0.35);
+    --glow-purple: rgba(192, 132, 252, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+    padding: 25px;
+    min-height: 100vh;
+}
+
+/* Fondo Tecnológico PRO con Rejilla y Orbes Luminosos Animados */
+.tech-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(192, 132, 252, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -2;
+}
+
+.glow-orb {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.4;
+    animation: pulseOrb 10s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+    top: -100px;
+    left: -100px;
+    background: var(--neon-blue);
+}
+
+.orb-2 {
+    bottom: -100px;
+    right: -100px;
+    background: var(--neon-purple);
+    animation-delay: 5s;
+}
+
+@keyframes pulseOrb {
+    0% { transform: scale(1); opacity: 0.3; }
+    100% { transform: scale(1.25); opacity: 0.55; }
+}
+
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* Tarjetas Estilo PRO con Glassmorphism y Bordes Multicolor */
+.pro-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 242, 254, 0.3);
+    box-shadow: 0 0 25px var(--glow-cyan), inset 0 0 15px rgba(255, 255, 255, 0.02);
+    border-radius: 20px;
+    backdrop-filter: blur(14px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pro-card:hover {
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 35px var(--glow-purple), inset 0 0 20px rgba(192, 132, 252, 0.1);
+}
+
+/* Carátula Formal PRO */
+.caratula {
+    padding: 35px;
+    text-align: center;
+    margin-bottom: 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+.caratula::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+}
+
+.badge-pro {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
+    color: #030712;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 10px var(--neon-cyan);
+    letter-spacing: 1.5px;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.logo-img {
+    width: 95px;
+    height: 95px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--neon-cyan);
+    box-shadow: 0 0 20px var(--neon-cyan);
+    transition: transform 0.4s ease;
+}
+
+.logo-img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.caratula h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    background: linear-gradient(90deg, #fff, var(--neon-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.caratula h2 {
+    font-size: 1.25rem;
+    color: var(--neon-purple);
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.datos-estudiante p {
+    font-size: 1.15rem;
+    margin: 6px 0;
+    color: #cbd5e1;
+}
+
+.datos-estudiante strong {
+    color: var(--neon-cyan);
+}
+
+/* Sección de Tema PRO */
+.seccion-tema {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.seccion-tema h2 {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.1rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+    letter-spacing: 1px;
+}
+
+.intro-tema {
+    font-size: 1.25rem;
+    max-width: 850px;
+    margin: 0 auto;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+/* Tarjetas Grid PRO - Alineación Uniforme y Perfecta */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 30px;
+    margin-bottom: 55px;
+    align-items: stretch;
+}
+
+.tarjeta {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-flex-fix {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content-wrapper {
+    flex-grow: 1;
+}
+
+.tarjeta h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-cyan);
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tarjeta p, .tarjeta ul {
+    font-size: 1.12rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+.tarjeta ul {
+    padding-left: 20px;
+}
+
+.tarjeta li {
+    margin-bottom: 10px;
+}
+
+.tarjeta strong {
+    color: var(--neon-purple);
+}
+
+/* Espacio de Imágenes con Lupa Interactiva */
+.espacio-imagen {
+    margin-top: 22px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: zoom-in;
+    border: 2px solid rgba(0, 242, 254, 0.4);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.espacio-imagen:hover {
+    transform: translateY(-4px);
+    border-color: var(--neon-purple);
+    box-shadow: 0 0 20px var(--glow-purple);
+}
+
+.espacio-imagen img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.espacio-imagen:hover img {
+    transform: scale(1.08);
+}
+
+.zoom-icon {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(3, 7, 18, 0.85);
+    color: var(--neon-cyan);
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    border: 1px solid var(--neon-cyan);
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Contenedor de Video Centrado PRO */
+.seccion-video {
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 55px;
+}
+
+.seccion-video h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-cyan);
+    font-size: 1.9rem;
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px var(--glow-cyan);
+}
+
+.centrar-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid var(--neon-cyan);
+    box-shadow: 0 0 35px var(--glow-cyan);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Modal / Lightbox para Zoom Grande */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 7, 18, 0.95);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.modal-contenido {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 12px;
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 50px var(--glow-cyan);
+    animation: zoomInModal 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes zoomInModal {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.cerrar {
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.cerrar:hover {
+    color: var(--neon-pink);
+    text-shadow: 0 0 15px var(--neon-pink);
+}
+
+/* Footer PRO */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid rgba(0, 242, 254, 0.2);
+    color: #64748b;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+}
